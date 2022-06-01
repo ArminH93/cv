@@ -32,11 +32,10 @@ body.active {
 }
 
 #theme-toggler {
-    content: icon();
     position: fixed;
     top: 15px;
     right: 25px;
-    padding: 15px 20px;
+    padding: 25px 30px;
     font-size: 30px;
     background: var(--secondary-bg-color);
     color: var(--primary-text-color);
