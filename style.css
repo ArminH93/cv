@@ -32,6 +32,7 @@ body.active {
 }
 
 #theme-toggler {
+    content: icon();
     position: fixed;
     top: 15px;
     right: 25px;
