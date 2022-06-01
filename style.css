@@ -1,9 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+
+:root {
+    --primary-bg-color: rgb(247, 247, 247);
+    --secondary-bg-color: #fff;
+    --primary-text-color: #666;
+    --secondary-text-color: #999;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13px;
+    color: var(--primary-text-color);
     max-width: 960px;
     margin: auto;
+    background: var(--primary-bg-color);
 }
+
+body.active {
+    --primary-bg-color: #222;
+    --secondary-bg-color: #333;
+    --primary-text-color: #fff;
+    --secondary-text-color: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.1s linear;
+}
+
+#theme-toggler {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    padding: 15px 20px;
+    font-size: 30px;
+    background: var(--secondary-bg-color);
+    color: var(--primary-text-color);
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
 h1 {
     font-size: 3em;
     letter-spacing: .5em;
@@ -18,12 +58,13 @@ h3 {
     font-size: 1.5em;
 }
 
-main { 
+main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 1em;
     margin-top: 3em;
 }
+
 header {
     text-align: center;
     margin: auto 2em;
@@ -31,6 +72,7 @@ header {
 
 section {
     margin: auto 1em 4em 2em;
+    text-decoration: none;
 }
 
 i {
@@ -47,13 +89,15 @@ hr {
     height: 1px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 500;
     margin-bottom: 0;
     padding-bottom: 1em;
 }
 
-@media (min-width: 1000px){
+@media (min-width: 1000px) {
     #mainLeft {
         border-right: 1px solid lightgray;
     }
